@@ -12,6 +12,12 @@ public class BookController {
 	@Autowired
 	private BookRepository repository; 
 	
+	/**
+	 * Show list of all books
+	 * 
+	 * @param model
+	 * @return
+	 */
     @RequestMapping(value="/booklist")
     public String studentList(Model model) {	
         model.addAttribute("books", repository.findAll());
